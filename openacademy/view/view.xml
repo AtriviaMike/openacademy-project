@@ -1,20 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
+<!--inicio seccion del xml para hacer una agrupacion 'nombre' y agrupar la descripcion en un notebook-->
         <record model="ir.ui.view" id="course_form_view">
             <field name="name">course.form</field>
 	    <field name="model">openacademy.source</field>
    	    <field name="arch" type="xml">
 	        <form string="Course Form">
-		    <sheet>
+		    <sheet>		
 			<group>
 			    <field name="name"/>
-			    <field name="description"/>
 			</group>
-		    </sheet>
+		        <notebook>
+                    	    <page string="Description" >
+			    	<field name="description" />
+			    </page>
+			    <page string="About">
+			    	This is an example of notebooks
+			    </page>
+                        </notebook>
+		     </sheet>
 		</form>
 	    </field>
 	</record>
+<!--termina seccion del xml para hacer una agrupacion 'nombre' y agrupar la descripcion en un notebook-->
+
+<!--inicio de seccion del xml para poner una barra de busqueda-->
+        
+        <record model="ir.ui.view" id="source_search_view">
+	    <field name="name">source.search.view</field>
+	    <field name="model">openacademy.source</field>
+	    <field name="arch" type="xml">
+		<search>
+		    <field name="name"/>
+		    <field name="description"/>
+		</search>
+	    </field>
+        </record>
+<!--termina seccion del xml para incluir una barra de busqueda-->
+
+<!--inicio de seccion del xml vista tipo tree-->
+        <record model="ir.ui.view" id="source_tree_view">
+            <field name="name">source.search.view</field>
+            <field name="model">openacademy.source</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+<!--termina seccion del xml vista tipo tree-->
+
         <record model="ir.actions.act_window" id="course_list_action">
             <field name="name">Courses</field>
             <field name="res_model">openacademy.source</field>
