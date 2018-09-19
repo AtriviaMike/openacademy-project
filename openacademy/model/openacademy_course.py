@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from openerp import models, fields, api
 
 class openacademy(models.Model):
@@ -7,3 +5,4 @@ class openacademy(models.Model):
 
      name = fields.Char(string='name',required=True)
      description = fields.Text(string='Description')
+

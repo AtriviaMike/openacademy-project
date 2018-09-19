@@ -13,7 +13,7 @@
 	-attendees registration
     """,
     # data files always loaded at installation
-    'data': ['view/view.xml' ],
+    'data': ['view/openacademy_course_view.xml','view/openacademy_session_view.xml',],
     # data files containing optionally loaded demonstration data
     'demo': ['demo/demo.xml' ],
     'installable': True,

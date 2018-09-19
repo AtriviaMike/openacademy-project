@@ -4,38 +4,38 @@
 <!--inicio seccion del xml para hacer una agrupacion 'nombre' y agrupar la descripcion en un notebook-->
         <record model="ir.ui.view" id="course_form_view">
             <field name="name">course.form</field>
-	    <field name="model">openacademy.source</field>
-   	    <field name="arch" type="xml">
-	        <form string="Course Form">
-		    <sheet>		
-			<group>
-			    <field name="name"/>
-			</group>
-		        <notebook>
-                    	    <page string="Description" >
-			    	<field name="description" />
-			    </page>
-			    <page string="About">
-			    	This is an example of notebooks
-			    </page>
+            <field name="model">openacademy.source</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                            <page string="Description" >
+                                <field name="description" />
+                            </page>
+                            <page string="About">
+                                This is an example of notebooks
+                            </page>
                         </notebook>
-		     </sheet>
-		</form>
-	    </field>
-	</record>
+                     </sheet>
+                </form>
+            </field>
+        </record>
 <!--termina seccion del xml para hacer una agrupacion 'nombre' y agrupar la descripcion en un notebook-->
 
 <!--inicio de seccion del xml para poner una barra de busqueda-->
-        
+
         <record model="ir.ui.view" id="source_search_view">
-	    <field name="name">source.search.view</field>
-	    <field name="model">openacademy.source</field>
-	    <field name="arch" type="xml">
-		<search>
-		    <field name="name"/>
-		    <field name="description"/>
-		</search>
-	    </field>
+            <field name="name">source.search.view</field>
+            <field name="model">openacademy.source</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
         </record>
 <!--termina seccion del xml para incluir una barra de busqueda-->
 
@@ -62,7 +62,7 @@
                 </p>
             </field>
         </record>
-   
+
         <!-- top level menu: no parent -->
         <menuitem id="main_openacademy_menu" name="Open Academy"/>
         <!-- A first level in the left side menu is needed
@@ -80,3 +80,4 @@
 
      </data>
 </openerp>
+            
