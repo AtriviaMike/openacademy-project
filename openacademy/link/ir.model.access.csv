@@ -1,4 +1,4 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 source_manager,course manager,model_openacademy_source,group_manager,1,1,1,1
 session_manager,session manager,model_openacademy_session,group_manager,1,1,1,1
 source_read_all,course all,model_openacademy_source,,1,0,0,0

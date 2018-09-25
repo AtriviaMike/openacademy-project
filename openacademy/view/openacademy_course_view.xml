@@ -45,6 +45,12 @@
                 <search>
                     <field name="name"/>
                     <field name="description"/>
+                    <!--Inicia seccion filtro -->
+                    <filter name="my_courses" string="My Courses" domain="[('responsible_id', '=', uid)]"/>
+                    <group string="Group By">
+                        <filter name="by_responsible" string="Responsible" context="{'group_by': 'responsible_id'}"/>
+                    </group>
+                    <!-- Termina seccion filtro -->
                 </search>
             </field>
         </record>
@@ -68,6 +74,8 @@
             <field name="res_model">openacademy.source</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
+            <!--En el eval , todo es estandar hasta despues del search default , despues de ahi es el string del filter-->
+            <field name="context" eval="{'search_default_my_courses': 1}"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create the first course
                 </p>
@@ -91,4 +99,4 @@
 
      </data>
 </openerp>
-            
+
